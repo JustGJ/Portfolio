@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,300&family=Raleway:wght@300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: outside none none;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.content {
+    position: absolute;
+    right: 0;
+    bottom: -100%;
+    height: 90%;
+    width: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background-color: #0F1627;
+    -webkit-transition: all 1.3s ease;
+    transition: all 1.3s ease;
+
+    @media (max-width: 1250px) {
+        width: 100%;
+    }
+
+    &--active {
+        bottom: 0;
+
+      
+    }
+
+}
+
+
+.overlay{
+    position: absolute;
+    // right: 0;
+    bottom: -100%;
+    height: 90%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    background-color: #041327;
+    transition: .4s ease-out;
+
+    @media (max-width: 1250px) {
+        width: 100%;
+    }
+
+    &--active {
+        bottom: 0;
+
+      
+    }
+
+}

@@ -1,0 +1,54 @@
+.burger {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 55px;
+    height: 35px;
+    top: 5%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 2;
+    
+    span {
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background-color: #c57b39;
+        border-radius: 10px;
+
+        &:nth-child(1){            
+            transition: top 300ms 300ms, transform 300ms;
+            top: 0;
+        }
+        &:nth-child(2){
+            transform: scale(1) translateY(-50%);
+            top: 50%;
+            transition: transform 300ms 200ms;
+        }
+        &:nth-child(3){
+            transition: bottom 300ms 300ms, transform 300ms;
+            bottom: 0;
+        }
+    }
+
+    &--active {
+        span:nth-child(1){
+            transition: top 300ms, transform 300ms 300ms;
+            transform: rotate(45deg);
+            top: 43%;
+        }
+        span:nth-child(2){
+            transition: transform 300ms ;
+            transform: scale(0) translateY(-50%);
+        }
+        span:nth-child(3){
+            transition: bottom 300ms, transform 300ms 300ms;
+            transform: rotate(135deg);
+            bottom: 43%;
+        }
+    }
+}
