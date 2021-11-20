@@ -1,33 +1,51 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router';
 import { BrowserRouter, Routes } from 'react-router-dom';
+import Content from './components/Content';
 import Navbar from './components/Navbar';
-import About from './pages/About';
-import Contact from './pages/Contact';
 import Home from './pages/Home';
-import Portfolio from './pages/Portfolio';
-import Technologies from './pages/Technologies';
-import Welcome from './pages/Welcome';
 
 const App = () => {
-    const [openContent, setOpenContent] = useState(false);
-    // const [openMenu, setOpenMenu] = useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
 
     return (
         <BrowserRouter>
-            <Home openContent={openContent} setOpenContent={setOpenContent} />
-
-            {/* <div className={`overlay ${openContent ? 'overlay--active' : ''}`}> */}
-            <div className={`content ${openContent ? 'content--active' : ''}`}>
-                <Routes>
-                    <Route path="/welcome" element={<Welcome />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/portfolio" element={<Portfolio />} />
-                    <Route path="/technologies" element={<Technologies />} />
-                    <Route path="/contact" element={<Contact />} />
-                </Routes>
-            </div>
-            {/* </div> */}
+            <Home setOpenMenu={setOpenMenu} openMenu={openMenu} />
+            {openMenu && <Navbar openMenu={openMenu} setOpenMenu={setOpenMenu} />}
+            <Routes>
+                <Route
+                    path="/welcome"
+                    element={<Content openMenu={openMenu} setOpenMenu={setOpenMenu} />}
+                />
+                <Route
+                    path="/about"
+                    element={
+                        <Content openMenu={openMenu} setOpenMenu={setOpenMenu} title="À propos" />
+                    }
+                />
+                <Route
+                    path="/portfolio"
+                    element={
+                        <Content openMenu={openMenu} setOpenMenu={setOpenMenu} title="Portfolio" />
+                    }
+                />
+                <Route
+                    path="/technologies"
+                    element={
+                        <Content
+                            openMenu={openMenu}
+                            setOpenMenu={setOpenMenu}
+                            title="Technologies"
+                        />
+                    }
+                />
+                <Route
+                    path="/contact"
+                    element={
+                        <Content openMenu={openMenu} setOpenMenu={setOpenMenu} title="Contact" />
+                    }
+                />
+            </Routes>
         </BrowserRouter>
     );
 };

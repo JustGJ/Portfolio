@@ -8,23 +8,37 @@
     height: 100vh;
     text-align: center;
     background-color: #FFFFFF;
-    -webkit-transition: all 1.3s ease;
-    transition: all 1.3s ease;
+    animation: 1.2s ease forwards contentToRight;
+    // -webkit-transition: all 1.3s ease;
+    // transition: all 1s ease;
     z-index: 1;
 
     @media (max-width: 1325px) {
-        left: 0;
         bottom: 100%;
-        width: 100%;
-    }
- 
-    &--active {
         left: 0;
-
-        @media (max-width: 1325px) {
-            bottom: 0;
-        }
+        width: 100vw;
+        animation: 1.2s ease forwards contentToBottom;
     }
+    // @media (max-width: 1325px) {
+    //     bottom: 100%;
+    //     left: 0;
+    // }
+ 
+    //  @media (max-width: 1325px) {
+    //      left: 0;
+    //         bottom: 100%;
+    //         width: 100%;
+    //     }
+
+    // &--active {
+    //     left: 0;
+
+       
+    // }
+
+    // @media (max-width: 1325px) {
+    //     bottom: 0 !important;
+    // }
 
     &__logo  img {
         width: 50%;

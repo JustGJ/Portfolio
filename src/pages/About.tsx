@@ -1,15 +1,13 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 
 const About = () => {
     return (
-        <div className="about">
-            <h1 className="about__title">À propos</h1>
-            <div className="about__content">
-                <p className="about__content__desc">Tout savoir sur mon parcours.</p>
-                <div className="about__content__journey">
+        <>
+            <div className="about">
+                <p className="about__desc">Tout savoir sur mon parcours.</p>
+                <div className="about__journey">
                     <h2>Parcours</h2>
-                    <div className="about__content__journey__content">
+                    <div className="about__journey__content">
                         <h3>Apprentissage autodidacte</h3>
                         <p>
                             J'apprends le développement web spécialisé front-end en autodidacte
@@ -52,7 +50,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
