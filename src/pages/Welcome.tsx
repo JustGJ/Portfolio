@@ -31,9 +31,9 @@ const Welcome = () => {
                 <Typed
                     className="typed"
                     strings={[
-                        'Hi, dear visitor, welcome to my website.',
-                        'Here you are in the principal menu!',
-                        'Please click on what you want to know about me.',
+                        'Bonjour cher visiteur, bienvenue sur mon site !',
+                        'Vous êtes dans le menu principal.',
+                        "Pour en savoir plus sur moi, veuillez naviguer l'onglet de votre choix.",
                     ]}
                     typeSpeed={50}
                     backSpeed={10}></Typed>

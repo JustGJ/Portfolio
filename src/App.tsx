@@ -8,6 +8,11 @@ import Home from './pages/Home';
 const App = () => {
     const [openMenu, setOpenMenu] = useState(false);
 
+    //* type array Card.tsx
+    //* activeClassName link navbar
+    //* Router link mobile and desktop (useffect)
+    //* Optimiser technos.map technologies.tsx
+
     return (
         <BrowserRouter>
             <Home setOpenMenu={setOpenMenu} openMenu={openMenu} />
@@ -24,7 +29,7 @@ const App = () => {
                     }
                 />
                 <Route
-                    path="/portfolio"
+                    path="/projects"
                     element={
                         <Content openMenu={openMenu} setOpenMenu={setOpenMenu} title="Portfolio" />
                     }

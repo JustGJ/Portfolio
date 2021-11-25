@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import MongoDB from '../assets/images/mongodb.png';
-import Skill from '../components/Skill';
-import data from '../data/skills.json';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import React from 'react';
+import Technos from '../components/Technos';
+import technos from '../data/technos';
 
 interface ITechno {
+    type: string;
     icon: string;
     text: string;
 }
 
 const Technologies = () => {
-    // const [technos, setTechnos] = useState<ITechno[]>([]);
-    // useEffect(() => {
-    //     setTechnos(data);
-    // }, [technos]);
-    const skills: any = data;
-
+    console.log(technos);
     return (
         <div className="technologies">
             <p className="technologies__desc">
@@ -26,52 +22,34 @@ const Technologies = () => {
                 <div className="technologies__content__technos">
                     <h2>Technologies</h2>
                     <div className="technos__list">
-                        <div className="techno__item">
-                            <i className="fab fa-html5" />
-                            <p>HTML5, JSX</p>
-                        </div>
-                        <div className="techno__item">
-                            <i className="fab fa-sass" />
-                            <p>CSS3, SCSS</p>
-                        </div>
-                        <div className="techno__item">
-                            <i className="fab fa-js" />
-                            <p>JavaScript</p>
-                        </div>
-                        <div className="techno__item">
-                            <i className="fab fa-react" />
-                            <p>React, Redux</p>
-                        </div>
-                        <div className="techno__item">
-                            <i className="fab fa-node" />
-                            <p>Node.js</p>
-                        </div>
+                        {technos.map((techno: ITechno) => {
+                            if (techno.type === 'techno') {
+                                return (
+                                    <div className="techno__item">
+                                        <i className={techno.icon} />
+                                        <p>{techno.text}</p>
+                                    </div>
+                                );
+                            }
+                            return null;
+                        })}
                     </div>
                 </div>
 
                 <div className="technologies__content__technos">
                     <h2>Outils</h2>
                     <div className="technos__list">
-                        <div className="techno__item">
-                            <i className="fab fa-git" />
-                            <p>Git</p>
-                        </div>
-                        <div className="techno__item">
-                            <i className="fab fa-github" />
-                            <p>Github</p>
-                        </div>
-                        <div className="techno__item">
-                            <i className="fab fa-trello" />
-                            <p>Trello</p>
-                        </div>
-                        <div className="techno__item">
-                            <i className="fas fa-code" />
-                            <p>VSCode</p>
-                        </div>
-                        <div className="techno__item">
-                            <i className="fab fa-discord" />
-                            <p>Discord</p>
-                        </div>
+                        {technos.map((techno: ITechno) => {
+                            if (techno.type === 'tool') {
+                                return (
+                                    <div className="techno__item">
+                                        <i className={techno.icon} />
+                                        <p>{techno.text}</p>
+                                    </div>
+                                );
+                            }
+                            return null;
+                        })}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Technos = () => {
+interface IProps {
+    type: string;
+    icon: string;
+    text: string;
+}
+
+const Technos = ({ type, icon, text }: IProps) => {
     return <div></div>;
 };
 

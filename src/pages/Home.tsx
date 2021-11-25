@@ -29,6 +29,7 @@ const Home = ({ setOpenMenu, openMenu }: any) => {
 
     useEffect(() => {
         location !== '/' ? setOpenMenu(true) : setOpenMenu(false);
+        // location !== '/' && resize <= 1325 ? setOpenMenu(true) : setOpenMenu(false);
     }, [location]);
 
     return (

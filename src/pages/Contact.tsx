@@ -81,7 +81,6 @@ const App = () => {
     return (
         <div className="contact">
             <div className="contact__header"></div>
-
             <form className="contact__form" onSubmit={handleSubmit}>
                 <h2>Contactez-moi</h2>
                 <div className="contact__form__social">

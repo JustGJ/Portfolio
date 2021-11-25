@@ -1,10 +1,11 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 // import Linkedin from '../assets/images/linkedin.png';
 import Logo from '../assets/images/logo.png';
 
 const Navbar = ({ openMenu, setOpenMenu }: any) => {
     const navigate = useNavigate();
+    const location = useLocation();
 
     const activeClassName = (link: any) =>
         `navbar__links__item__content ${
@@ -42,7 +43,7 @@ const Navbar = ({ openMenu, setOpenMenu }: any) => {
                     </NavLink>
                 </li>
                 <li className="navbar__links__item">
-                    <NavLink className={activeClassName} to="/portfolio" onClick={handleCloseMenu}>
+                    <NavLink className={activeClassName} to="/projects" onClick={handleCloseMenu}>
                         Portfolio
                     </NavLink>
                 </li>

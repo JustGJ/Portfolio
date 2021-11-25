@@ -1,0 +1,13 @@
+.projects {
+    &__cards {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (max-width: 960px) {
+            justify-content: center;
+        }
+    }
+}
