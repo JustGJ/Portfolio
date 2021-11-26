@@ -13,21 +13,14 @@
     overflow-y:auto;
     overflow-x: hidden;
     animation: 1.2s ease forwards contentToTop;
-    // -webkit-transition: all 1.3s ease;
     transition: all .2s  ease;
-    // box-shadow: 0px -14px 15px 14px var(--color-blue-80);
     box-shadow: -34px 11px 36px 40px var(--color-blue-80);
 
     @media (max-width: 1325px) {
-        // left: 0;
-        // bottom: 100%;
         width: 100vw;
         height: 90vh;
     }
-    // &--active {
-    //     bottom: 0;
-    // }
-
+ 
     &__title {
         position: relative;
         display: inline-block;
@@ -59,9 +52,4 @@
         width: 80%;
         margin: 45px auto;
     }
-}
-
-.anime {
-background-color: red;
-transition: .1s;
 }

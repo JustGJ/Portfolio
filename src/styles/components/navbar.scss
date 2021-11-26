@@ -108,8 +108,9 @@
                     top: 0;
                     height: 3px;
                     background-color: #c57b39;
+                    transition: .2s ease-out;
                 }
-                &::after{bottom: 0 !important;}
+                &::after{top: 100% !important;}
             }
         }
     }

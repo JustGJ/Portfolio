@@ -28,9 +28,9 @@ const Home = ({ setOpenMenu, openMenu }: any) => {
     }, [setOpenMenu, navigate, resize]);
 
     useEffect(() => {
-        location !== '/' ? setOpenMenu(true) : setOpenMenu(false);
-        // location !== '/' && resize <= 1325 ? setOpenMenu(true) : setOpenMenu(false);
-    }, [location]);
+        // For Desktop
+        location !== '/' && resize >= 1325 ? setOpenMenu(true) : setOpenMenu(false);
+    }, [location, resize, setOpenMenu]);
 
     return (
         <>

@@ -44,7 +44,7 @@ const Navbar = ({ openMenu, setOpenMenu }: any) => {
                 </li>
                 <li className="navbar__links__item">
                     <NavLink className={activeClassName} to="/projects" onClick={handleCloseMenu}>
-                        Portfolio
+                        Projets
                     </NavLink>
                 </li>
                 <li className="navbar__links__item">

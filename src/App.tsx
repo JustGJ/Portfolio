@@ -9,9 +9,9 @@ const App = () => {
     const [openMenu, setOpenMenu] = useState(false);
 
     //* type array Card.tsx
-    //* activeClassName link navbar
-    //* Router link mobile and desktop (useffect)
+    //* animation navbar link brutal
     //* Optimiser technos.map technologies.tsx
+    //* Transform title toright content.tsx
 
     return (
         <BrowserRouter>
