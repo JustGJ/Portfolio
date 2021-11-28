@@ -1,6 +1,4 @@
-import { icon } from '@fortawesome/fontawesome-svg-core';
 import React from 'react';
-import Technos from '../components/Technos';
 import technos from '../data/technos';
 
 interface ITechno {
@@ -10,7 +8,6 @@ interface ITechno {
 }
 
 const Technologies = () => {
-    console.log(technos);
     return (
         <div className="technologies">
             <p className="technologies__desc">
@@ -22,10 +19,10 @@ const Technologies = () => {
                 <div className="technologies__content__technos">
                     <h2>Technologies</h2>
                     <div className="technos__list">
-                        {technos.map((techno: ITechno) => {
+                        {technos.map((techno: ITechno, index) => {
                             if (techno.type === 'techno') {
                                 return (
-                                    <div className="techno__item">
+                                    <div key={index} className="techno__item">
                                         <i className={techno.icon} />
                                         <p>{techno.text}</p>
                                     </div>
@@ -39,10 +36,10 @@ const Technologies = () => {
                 <div className="technologies__content__technos">
                     <h2>Outils</h2>
                     <div className="technos__list">
-                        {technos.map((techno: ITechno) => {
+                        {technos.map((techno: ITechno, index) => {
                             if (techno.type === 'tool') {
                                 return (
-                                    <div className="techno__item">
+                                    <div key={index} className="techno__item">
                                         <i className={techno.icon} />
                                         <p>{techno.text}</p>
                                     </div>

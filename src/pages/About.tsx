@@ -55,22 +55,3 @@ const About = () => {
 };
 
 export default About;
-
-{
-    /* <div className="technologies__content__skills">
-                    <h2>Technologies</h2>
-                    {skills.map((skill: any) => {
-                        if (skill.type === 'techno')
-                            techs.push(<Skill icon={skill.icon} text={skill.text} />);
-                        else tools.push(<Skill icon={skill.icon} text={skill.text} />);
-                    })}
-                    <div className="technologies__content__skills__techno">
-                        <h2>Technologies</h2>
-                        {techs}
-                    </div>
-                    <div className="technologies__content__skills__tools">
-                        <h2>Outils</h2>
-                        {tools}
-                    </div>
-                </div> */
-}

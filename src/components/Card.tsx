@@ -24,8 +24,8 @@ const Card = ({ fullName, description, github, website, image, stacks }: IProps)
                 </div>
                 <div className="card__face2">
                     <ul className="face2__stack">
-                        {stacks.map((stack: any) => (
-                            <li>
+                        {stacks.map((stack: any, index: any) => (
+                            <li key={index}>
                                 <img src={stack} alt={`${stack} icon`} />
                             </li>
                         ))}

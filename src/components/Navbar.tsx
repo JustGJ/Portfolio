@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 // import Linkedin from '../assets/images/linkedin.png';
 import Logo from '../assets/images/logo.png';
 

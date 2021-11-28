@@ -5,7 +5,7 @@ import Contact from '../pages/Contact';
 import Projects from '../pages/Projects';
 import Technologies from '../pages/Technologies';
 import Welcome from '../pages/Welcome';
-import Fade from './Fade';
+// import Fade from './Fade';
 
 const Content = ({ openMenu, visible, title }: any): any => {
     const location = useLocation().pathname;

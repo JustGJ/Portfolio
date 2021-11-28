@@ -18,14 +18,11 @@ const App = () => {
     return (
         <BrowserRouter>
             <Home setOpenMenu={setOpenMenu} openMenu={openMenu} />
-            {/* <Fade visible={openMenu} duration="800" className="fade__navbar"> */}
-            {openMenu && <Navbar openMenu={openMenu} setOpenMenu={setOpenMenu} />}
-            {/* </Fade> */}
+            <Fade visible={openMenu} duration="800" className="fade__navbar">
+                <Navbar openMenu={openMenu} setOpenMenu={setOpenMenu} />
+            </Fade>
 
-            {/* <Fade visible={openMenu} className="fade__content" duration="800">
-                <Content openMenu={openMenu} />
-            </Fade> */}
-            {/* <Fade visible={openMenu} className="fade__content" duration="800"> */}
+            {/* <Fade visible={openMenu} className="fade__content" duration="2000"> */}
             <Routes>
                 <Route path="/welcome" element={<Content openMenu={openMenu} />} />
                 <Route path="/about" element={<Content openMenu={openMenu} title="À propos" />} />

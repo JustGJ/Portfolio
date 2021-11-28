@@ -44,11 +44,7 @@ const technos = [
         icon: 'fab fa-github',
         text: 'Github',
     },
-    {
-        type: 'tool',
-        icon: 'fab fa-git',
-        text: 'Git',
-    },
+
     {
         type: 'tool',
         icon: 'fab fa-trello',

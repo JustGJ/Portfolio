@@ -24,6 +24,7 @@ const Home = ({ setOpenMenu, openMenu }: any) => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('wheel', handleGoToHome);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [setOpenMenu, navigate, resize]);
 
     useEffect(() => {

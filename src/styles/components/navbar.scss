@@ -1,6 +1,6 @@
 .navbar {
-    position: absolute;
-    left: -30%;
+    // position: absolute;
+    // left: -30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,9 +8,8 @@
     height: 100vh;
     text-align: center;
     background-color: #FFFFFF;
-    animation: 1.2s ease forwards contentToRight;
+    // animation: 1.2s ease forwards contentToRight;
     // -webkit-transition: all 1.3s ease;
-    z-index: 9999;
 
     @media (max-width: 1325px) {
         bottom: 100%;
