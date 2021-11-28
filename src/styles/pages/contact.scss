@@ -1,25 +1,13 @@
 .contact {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 5% 15% auto 29%;
-    grid-template-areas:
-        '1'
-        '2'
-        '3'
-        '4';
-
-    @media (max-width: 1150px) {
-        grid-template-rows: 8% 12% auto auto;
-    }
     &__desc {
-        grid-area: 1;
         font-size: 1.1rem;
     }
     &__header {
-        grid-area: 2;
         position: relative;
         width: 100%;
         height: 285px;
+
+        margin-top: 20px;
 
         &:before {
             content: '';
@@ -33,9 +21,18 @@
         }
     }
 
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translateX(-50%);
+    }
     &__form {
-        grid-area: 3;
-        width: 30%;
+        width: 25%;
         height: max-content;
         background: var(--color-blue-80);
         margin: 0 auto;
@@ -57,7 +54,8 @@
             width: 65%;
         }
         @media (max-width: 520px) {
-            width: 90%;
+            margin-top: 10px;
+            width: 80%;
         }
 
         h2 {
@@ -148,7 +146,7 @@
         &__submit {
             font-size: 1.3rem;
             background-color: transparent;
-            margin: 25px 0 0;
+            margin: 25px 0 10px 0;
             color: #f5ca8a;
             border: none;
             cursor: pointer;
@@ -183,106 +181,38 @@
             }
         }
     }
+
     &__social {
-        grid-area: 4;
+        margin-top: 40px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
 
-        ul {
-            width: 100%;
+        &__details {
             display: flex;
-            justify-content: space-around;
-            text-align: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
 
-            li {
-                width: 20%;
-                font-size: 1.2rem;
-                background: #f5ca8a;
-                border-radius: 10px;
-                padding: 0.7rem 0;
-                cursor: pointer;
-                transform: scaleY(0);
-                transform-origin: center;
-                transition: scale 0.1s;
-                margin: 4px 0;
+            span {
+                margin-bottom: 15px;
+                font-weight: 200;
+            }
+        }
+        &__network {
+            margin-top: 10px;
 
-                @media (max-width: 800px) {
-                    width: 30%;
-                }
-                @media (max-width: 400px) {
-                    width: 35%;
-                }
-                @media (max-width: 320px) {
-                    width: 38%;
-                }
+            a {
+                color: #fff;
+            }
+
+            i {
+                font-size: 1.9rem;
+                margin-right: 10px;
+                transition: .3s ease-in-out;
+
                 &:hover {
-                    background: #e7b86c;
+                    transform: scale(1.1);
                 }
-
-                h4 {
-                    color: var(--color-blue-80);
-
-                    @media (max-width: 800px) {
-                        font-size: 1rem;
-                    }
-                    @media (max-width: 550px) {
-                        font-size: 0.8rem;
-                    }
-                }
-
-                i {
-                    color: black;
-                    margin-top: 0.3rem;
-
-                    @media (max-width: 800px) {
-                        font-size: 0.95rem;
-                    }
-
-                    @media (max-width: 500px) {
-                        font-size: 0.85rem;
-                    }
-                }
-                span {
-                    color: #000000;
-                    font-size: 0.95rem;
-                    margin-left: 7px;
-                    font-weight: 500;
-
-                    @media (max-width: 800px) {
-                        font-size: 0.82rem;
-                    }
-                    @media (max-width: 550px) {
-                        font-size: 0.75rem;
-                    }
-                    @media (max-width: 450px) {
-                        font-size: 0.7rem;
-                    }
-                }
-            }
-
-            //ANIMATION
-            @mixin networkAnim($timeout) {
-                animation: pop 1s forwards;
-                animation-delay: $timeout;
-            }
-            @keyframes pop {
-                to {
-                    transform: scaleY(1);
-                }
-            }
-            li:nth-child(1) {
-                @include networkAnim(0.4s);
-            }
-            li:nth-child(2) {
-                @include networkAnim(0.8s);
-            }
-            li:nth-child(3) {
-                @include networkAnim(1.2s);
-            }
-            li:nth-child(4) {
-                @include networkAnim(1.6s);
             }
         }
     }

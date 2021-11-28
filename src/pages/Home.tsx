@@ -16,6 +16,10 @@ const Home = ({ setOpenMenu, openMenu }: any) => {
         e.deltaY > 0 && location === '/' && navigate('/welcome');
     };
 
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     screen.width <= 1325 && navigate('/welcome');
+    // });
+
     useEffect(() => {
         window.addEventListener('wheel', handleGoToHome);
         window.addEventListener('resize', handleResize);
@@ -28,6 +32,9 @@ const Home = ({ setOpenMenu, openMenu }: any) => {
     }, [setOpenMenu, navigate, resize]);
 
     useEffect(() => {
+        // resize <= 1325 && navigate('/welcome');
+        console.log(window.screen);
+
         // For Desktop
         location !== '/' && resize >= 1325 && setOpenMenu(true);
     }, [location, resize, setOpenMenu]);

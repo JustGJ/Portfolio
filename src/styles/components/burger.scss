@@ -12,6 +12,11 @@
     cursor: pointer;
     z-index: 9999;
 
+    @media (max-width: 600px) {
+        // top: 6%;
+        left: 8%;
+      }
+
     span {
         display: inline-block;
         position: absolute;

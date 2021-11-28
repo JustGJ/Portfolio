@@ -81,80 +81,70 @@ const App = () => {
     return (
         <div className="contact">
             <div className="contact__desc">Vous souhaitez me contacter ?</div>
-            <div className="contact__header"></div>
-            <form className="contact__form" onSubmit={handleSubmit}>
-                <h2>Contactez-moi</h2>
-                <div className="contact__form__content">
-                    <input
-                        className={nameError ? 'error' : ''}
-                        type="text"
-                        name="name"
-                        onChange={(e) => setName(e.target.value)}
-                        placeholder="nom *"
-                        value={name}
-                        autoComplete="off"
-                    />
-
-                    <div className="content__email">
-                        {emailError && (
-                            <label className="content__email--error">Email non valide</label>
-                        )}
+            {window.innerWidth >= 1325 ? <div className="contact__header"></div> : ''}
+            <div className="contact__container">
+                <form className="contact__form" onSubmit={handleSubmit}>
+                    <h2>Contactez-moi</h2>
+                    <div className="contact__form__content">
                         <input
-                            className={emailError ? 'error' : ''}
-                            type="mail"
-                            name="email"
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder="email *"
-                            value={email}
+                            className={nameError ? 'error' : ''}
+                            type="text"
+                            name="name"
+                            onChange={(e) => setName(e.target.value)}
+                            placeholder="nom *"
+                            value={name}
                             autoComplete="off"
                         />
+
+                        <div className="content__email">
+                            {emailError && (
+                                <label className="content__email--error">Email non valide</label>
+                            )}
+                            <input
+                                className={emailError ? 'error' : ''}
+                                type="mail"
+                                name="email"
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="email *"
+                                value={email}
+                                autoComplete="off"
+                            />
+                        </div>
+                        <textarea
+                            className={messageError ? 'error' : ''}
+                            name="message"
+                            onChange={(e) => setMessage(e.target.value)}
+                            placeholder="message *"
+                            value={message}
+                        />
                     </div>
-                    <textarea
-                        className={messageError ? 'error' : ''}
-                        name="message"
-                        onChange={(e) => setMessage(e.target.value)}
-                        placeholder="message *"
-                        value={message}
-                    />
-                </div>
-                <button className="contact__form__submit" type="submit">
-                    Envoyer
-                </button>
-                {loading ? (
-                    <div className="form__loading">
-                        <Loader type="Oval" color="#ffe9c7" height={45} width={45} />
+                    <button className="contact__form__submit" type="submit">
+                        Envoyer
+                    </button>
+                    {loading ? (
+                        <div className="form__loading">
+                            <Loader type="Oval" color="#ffe9c7" height={45} width={45} />
+                        </div>
+                    ) : (
+                        <div ref={ref} className="form__message"></div>
+                    )}
+                </form>
+
+                <div className="contact__social">
+                    <div className="contact__social__details">
+                        <span>jf.gasp@gmail.com</span>
+                        <span>0782435296</span>
                     </div>
-                ) : (
-                    <div ref={ref} className="form__message"></div>
-                )}
-            </form>
-            <div className="contact__social">
-                <ul>
-                    <li>
-                        <a
-                            href="https://www.linkedin.com/in/jeff-gasparini-%E2%9A%9B%EF%B8%8F-4b9ba0221/"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <h4>Linkedin</h4>
-                            <i className="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://github.com/JustGJ"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <h4>Github</h4>
+
+                    <div className="contact__social__network">
+                        <a href="https://github.com/JustGJ">
                             <i className="fab fa-github" />
                         </a>
-                    </li>
-
-                    <li>
-                        <h4>Téléphone</h4>
-                        <i className="fas fa-phone-alt" />
-                        <span>0782435296</span>
-                    </li>
-                </ul>
+                        <a href="https://www.linkedin.com/in/jeff-gasparini-%E2%9A%9B%EF%B8%8F-4b9ba0221/">
+                            <i className="fab fa-linkedin" />
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     );

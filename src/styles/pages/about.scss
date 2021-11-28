@@ -1,36 +1,35 @@
 .about {
     &__desc {
-      font-size: 1.1rem;
+        font-size: 1.1rem;
     }
     &__journey {
-      width: 75%;
-      margin: 30px auto 0 ;
-      opacity: 0;
-      transform: translateX(10%);
-      animation:  .7s ease-out forwards .25s contentToLeft;
-      
-      @media (max-width: 720px) {
-        width: 95%;
-      }
+        width: 75%;
+        margin: 30px auto 0;
+        opacity: 0;
+        transform: translateX(10%);
+        animation: 0.7s ease-out forwards 0.25s contentToLeft;
 
-      h2 {
-        font-size: 1.7rem;
-        text-align: center;
-        margin: 22px 0;
-      }
-      &__content {
-
-          h3 {
-            margin: 21px 0;
-          }
-          p {
-            font-size: 1.1rem;
-            margin: 18px 0;
-          }
+        @media (max-width: 720px) {
+            width: 95%;
         }
-    }  
+
+        h2 {
+            font-size: 1.7rem;
+            text-align: center;
+            margin: 22px 0;
+        }
+        &__content {
+            h3 {
+                margin: 21px 0;
+
+                @media (max-width: 700px) {
+                    font-size: 1.1rem;
+                }
+            }
+            p {
+                font-size: 1.05rem;
+                margin: 18px 0;
+            }
+        }
+    }
 }
-    
-
-
-

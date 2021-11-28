@@ -15,6 +15,11 @@ const App = () => {
     //* Optimiser technos.map technologies.tsx
     //* Transform title toright content.tsx
 
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     // eslint-disable-next-line no-restricted-globals
+    //     screen.width <= 1325 && navigate('/welcome');
+    // });
+
     return (
         <BrowserRouter>
             <Home setOpenMenu={setOpenMenu} openMenu={openMenu} />

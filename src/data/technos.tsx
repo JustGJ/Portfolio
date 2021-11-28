@@ -1,3 +1,6 @@
+import express from '../assets/images/express.png';
+import { SiPostman } from 'react-icons/si';
+
 const technos = [
     {
         type: 'techno',
@@ -24,14 +27,10 @@ const technos = [
         icon: 'fab fa-node',
         text: 'Node.js',
     },
+
     {
         type: 'techno',
-        icon: '../assets/images/mongodb.png',
-        text: 'MongoDB',
-    },
-    {
-        type: 'techno',
-        icon: '../assets/images/express.png',
+        image: express,
         text: 'Express',
     },
     {
@@ -62,7 +61,7 @@ const technos = [
     },
     {
         type: 'tool',
-        icon: 'fas fa-code',
+        image: <SiPostman fontSize="3.18rem" />,
         text: 'Postman',
     },
 ];

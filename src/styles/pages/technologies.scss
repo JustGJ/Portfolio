@@ -28,7 +28,8 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        margin: 30px auto 0 ;
+        margin: 30px auto ;
+        // margin: 0 auto;
 
         // &::before {
         //     content: "";
@@ -90,6 +91,10 @@
 
                             i {
                                 font-size: 3.5rem;
+                            }
+                            img {
+                                width: 55px;
+                                height: 55px;
                             }
                             p {
                                 margin-top: 15px;
