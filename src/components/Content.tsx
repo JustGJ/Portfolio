@@ -5,11 +5,13 @@ import Contact from '../pages/Contact';
 import Projects from '../pages/Projects';
 import Technologies from '../pages/Technologies';
 import Welcome from '../pages/Welcome';
+import Fade from './Fade';
 
-const Content = ({ title }: any): any => {
+const Content = ({ openMenu, visible, title }: any): any => {
     const location = useLocation().pathname;
 
     return (
+        // <Fade visible={openMenu} className="fade__content" duration="800">
         <div className="content">
             <h1 className="content__title">{title}</h1>
             <div className="content__wrapper">
@@ -20,6 +22,7 @@ const Content = ({ title }: any): any => {
                 {location === '/contact' && <Contact />}
             </div>
         </div>
+        // </Fade>
     );
 };
 

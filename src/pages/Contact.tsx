@@ -80,20 +80,10 @@ const App = () => {
 
     return (
         <div className="contact">
+            <div className="contact__desc">Vous souhaitez me contacter ?</div>
             <div className="contact__header"></div>
             <form className="contact__form" onSubmit={handleSubmit}>
                 <h2>Contactez-moi</h2>
-                <div className="contact__form__social">
-                    <a href="https://github.com/JustGJ" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-github"></i>
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/jeff-gasparini-%E2%9A%9B%EF%B8%8F-4b9ba0221/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <i className="fab fa-linkedin"></i>
-                    </a>
-                </div>
                 <div className="contact__form__content">
                     <input
                         className={nameError ? 'error' : ''}
@@ -138,6 +128,34 @@ const App = () => {
                     <div ref={ref} className="form__message"></div>
                 )}
             </form>
+            <div className="contact__social">
+                <ul>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/jeff-gasparini-%E2%9A%9B%EF%B8%8F-4b9ba0221/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <h4>Linkedin</h4>
+                            <i className="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/JustGJ"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <h4>Github</h4>
+                            <i className="fab fa-github" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <h4>Téléphone</h4>
+                        <i className="fas fa-phone-alt" />
+                        <span>0782435296</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 };

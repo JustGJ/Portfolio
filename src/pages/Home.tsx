@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Burger from '../components/Burger';
 
 const Home = ({ setOpenMenu, openMenu }: any) => {
-    // const [openMenu, setOpenMenu] = useState(false);
     const location = useLocation().pathname;
     const navigate = useNavigate();
     const [resize, setResize] = useState(window.innerWidth);
@@ -29,7 +28,7 @@ const Home = ({ setOpenMenu, openMenu }: any) => {
 
     useEffect(() => {
         // For Desktop
-        location !== '/' && resize >= 1325 ? setOpenMenu(true) : setOpenMenu(false);
+        location !== '/' && resize >= 1325 && setOpenMenu(true);
     }, [location, resize, setOpenMenu]);
 
     return (

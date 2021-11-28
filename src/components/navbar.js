@@ -1,9 +1,8 @@
 import React from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-// import Linkedin from '../assets/images/linkedin.png';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Logo from '../assets/images/logo.png';
 
-const Navbar = ({ openMenu, setOpenMenu }: any) => {
+const Navbar = ({ setOpenMenu }: any) => {
     const navigate = useNavigate();
 
     const activeClassName = (link: any) =>
@@ -17,19 +16,20 @@ const Navbar = ({ openMenu, setOpenMenu }: any) => {
     };
 
     const handleCloseMenu = () => {
-        if (window.innerWidth < 1325) {
+        // For Mobile
+        if (window.innerWidth < 1350) {
             setOpenMenu(false);
         }
     };
 
     return (
-        <nav className={`navbar ${openMenu ? 'navbar--active' : ''}`}>
+        <nav className="navbar">
             <div className="navbar__logo" onClick={handleGoToHome}>
                 <img src={Logo} alt="Jeff Gasparini logo" />
             </div>
             <ul className="navbar__links">
                 <li className="navbar__links__item">
-                    <NavLink className={activeClassName} to="/welcome" onClick={handleCloseMenu}>
+                    <NavLink className={activeClassName} to="/welcome">
                         Bienvenue
                     </NavLink>
                 </li>
