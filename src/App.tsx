@@ -12,8 +12,9 @@ const App = () => {
 
     //* type array Card.tsx
     //* animation navbar link brutal
-    //* Optimiser technos.map technologies.tsx
+    //* animation title toright
     //* Transform title toright content.tsx
+    //* Go yo welcome si on est sur mobile
 
     // document.addEventListener('DOMContentLoaded', function () {
     //     // eslint-disable-next-line no-restricted-globals
