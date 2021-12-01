@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Burger from '../components/Burger';
+import Particles from 'react-tsparticles';
 
 const Home = ({ setOpenMenu, openMenu }: any) => {
     const location = useLocation().pathname;

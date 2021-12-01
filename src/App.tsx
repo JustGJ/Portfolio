@@ -33,7 +33,7 @@ const App = () => {
                 <Route path="/welcome" element={<Content openMenu={openMenu} />} />
                 <Route path="/about" element={<Content openMenu={openMenu} title="À propos" />} />
                 <Route
-                    path="/projects"
+                    path="/portfolio"
                     element={<Content openMenu={openMenu} title="Portfolio" />}
                 />
                 <Route

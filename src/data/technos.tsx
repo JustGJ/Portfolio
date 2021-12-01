@@ -36,7 +36,7 @@ const technos = [
     {
         type: 'tool',
         icon: 'fab fa-git',
-        text: 'Git',
+        text: 'Git, Gitflow',
     },
     {
         type: 'tool',

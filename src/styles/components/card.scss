@@ -7,7 +7,7 @@
     border: 1px solid #676a6c;
     transition: 1s ease;
     opacity: 0;
-    animation:  .8s ease-out forwards appear;
+    animation: .8s ease-out .2s forwards appear;
 
     &:hover {
         transform: translateY(-5%);
@@ -136,7 +136,7 @@
                 text-align: center;
                 font-size: 1rem;
                 padding: 0 10px;
-            
+
                 @media (max-width: 1420px) {
                     font-size: 0.8rem;
                 }
@@ -146,7 +146,7 @@
                 @media (max-width: 740px) {
                     font-size: 0.85rem;
                 }
-    
+
                 @media (max-width: 600px) {
                     font-size: 0.75rem;
                 }
@@ -189,9 +189,3 @@
         }
     }
 }
-
-        
-
-       
-          
-

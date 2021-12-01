@@ -22,9 +22,10 @@
     "react-icons": "^4.3.1",
     "react-loader-spinner": "^4.0.0",
     "react-parallax": "^3.3.0",
+    "react-particles-js": "^3.6.0",
     "react-router-dom": "^6.0.0",
     "react-scripts": "4.0.3",
-    "react-tsparticles": "^1.37.3",
+    "react-tsparticles": "^1.37.4",
     "react-typed": "^1.2.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.4",
@@ -56,6 +57,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router": "^3.0.27"
+    "@types/react-router": "^3.0.27",
+    "tsparticles": "^1.37.4"
   }
 }

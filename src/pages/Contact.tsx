@@ -85,6 +85,14 @@ const App = () => {
             <div className="contact__container">
                 <form className="contact__form" onSubmit={handleSubmit}>
                     <h2>Contactez-moi</h2>
+                    <div className="contact__form__social">
+                        <a href="https://github.com/JustGJ">
+                            <i className="fab fa-github" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/jeff-gasparini-%E2%9A%9B%EF%B8%8F-4b9ba0221/">
+                            <i className="fab fa-linkedin" />
+                        </a>
+                    </div>
                     <div className="contact__form__content">
                         <input
                             className={nameError ? 'error' : ''}
@@ -134,14 +142,9 @@ const App = () => {
                     <div className="contact__social__details">
                         <span>jf.gasp@gmail.com</span>
                         <span>0782435296</span>
-                    </div>
-
-                    <div className="contact__social__network">
-                        <a href="https://github.com/JustGJ">
-                            <i className="fab fa-github" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/jeff-gasparini-%E2%9A%9B%EF%B8%8F-4b9ba0221/">
-                            <i className="fab fa-linkedin" />
+                        <a>
+                            <i className="fas fa-cloud-download-alt" />
+                            <span>CV</span>
                         </a>
                     </div>
                 </div>

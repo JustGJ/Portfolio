@@ -8,10 +8,7 @@ const Burger = ({ setOpenMenu, openMenu }: any) => {
 
     const handleToggleMenu = () => {
         setOpenMenu(!openMenu);
-        // setAnimateBurger(!animateBurger);
-        // navigate('/welcome');
         if (location === '/') navigate('/welcome');
-        // if (location !== '/') setOpenMenu(!openMenu);
     };
 
     return (

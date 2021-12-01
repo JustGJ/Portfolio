@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background:  center / cover no-repeat url('../../assets/images/g.jpg');
+    background:  center / cover no-repeat url('../../assets/images/home.jpg');
 
     &__content {
         position: absolute;
@@ -76,4 +76,9 @@
 
 
 
-
+.test3 {
+    position: absolute !important;
+    // bottom: 0%;
+    height: 100% !important;
+    width: 100% !important;
+}
