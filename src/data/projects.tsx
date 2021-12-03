@@ -24,7 +24,7 @@ const projects = [
     {
         fullName: 'Github-Jobs-Api',
         stacks: [react, scss],
-        description: "Annuaire d'offres d'emploi",
+        description: "Annuaire d'emploi avec filtres, darkmode et localstorage",
         github: 'https://github.com/JustGJ/Github-jobs-API',
         website: 'https://justgj.github.io/Github-jobs-API/',
         image: githubJobs,

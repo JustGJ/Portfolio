@@ -1,9 +1,18 @@
 .about {
+    &__title {
+        @extend %title;
+
+    }
     &__desc {
         font-size: 1.1rem;
+        margin-left: 100px;
+
+        @media (max-width: 650px) {
+            margin-left: 43px;
+        }
     }
     &__journey {
-        width: 75%;
+        width: 80%;
         margin: 30px auto 0;
         opacity: 0;
         transform: translateX(10%);
@@ -19,6 +28,8 @@
             margin: 22px 0;
         }
         &__content {
+            margin: 0 auto;
+            width: 85%;
             h3 {
                 margin: 21px 0;
 

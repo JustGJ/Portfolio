@@ -4,45 +4,50 @@ import { BrowserRouter, Routes } from 'react-router-dom';
 import Content from './components/Content';
 import Fade from './components/Fade';
 import Navbar from './components/Navbar';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
+import Technologies from './pages/Technologies';
+import Welcome from './pages/Welcome';
 
 const App = () => {
     const [openMenu, setOpenMenu] = useState(false);
-    // const [visible, setVisible] = useState(false);
+    const [openContent, setOpenContent] = useState(false);
 
     //* type array Card.tsx
     //* animation navbar link brutal
-    //* animation title toright
-    //* Transform title toright content.tsx
     //* Go yo welcome si on est sur mobile
-
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     // eslint-disable-next-line no-restricted-globals
-    //     screen.width <= 1325 && navigate('/welcome');
-    // });
 
     return (
         <BrowserRouter>
-            <Home setOpenMenu={setOpenMenu} openMenu={openMenu} />
+            <Home
+                setOpenMenu={setOpenMenu}
+                openMenu={openMenu}
+                openContent={openContent}
+                setOpenContent={setOpenContent}
+            />
+
             <Fade visible={openMenu} duration="800" className="fade__navbar">
-                <Navbar openMenu={openMenu} setOpenMenu={setOpenMenu} />
+                <Navbar
+                    openMenu={openMenu}
+                    setOpenMenu={setOpenMenu}
+                    openContent={openContent}
+                    setOpenContent={setOpenContent}
+                />
             </Fade>
 
-            {/* <Fade visible={openMenu} className="fade__content" duration="2000"> */}
-            <Routes>
-                <Route path="/welcome" element={<Content openMenu={openMenu} />} />
-                <Route path="/about" element={<Content openMenu={openMenu} title="À propos" />} />
-                <Route
-                    path="/portfolio"
-                    element={<Content openMenu={openMenu} title="Portfolio" />}
-                />
-                <Route
-                    path="/technologies"
-                    element={<Content openMenu={openMenu} title="Technologies" />}
-                />
-                <Route path="/contact" element={<Content openMenu={openMenu} title="Contact" />} />
-            </Routes>
-            {/* </Fade> */}
+            <Fade visible={openContent} className="fade__content" duration="800">
+                <div className="content">
+                    <Routes>
+                        <Route path="/welcome" element={<Welcome />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/portfolio" element={<Portfolio />} />
+                        <Route path="/technologies" element={<Technologies />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                </div>
+            </Fade>
         </BrowserRouter>
     );
 };

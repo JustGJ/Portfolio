@@ -11,20 +11,68 @@
 @keyframes contentToLeft {to { opacity: 1; transform: translateX(0);}}
 @keyframes contentToRight {to { opacity: 1; left: 0;}}
 
+
+@keyframes appearToRight {to { opacity: 1; transform: translateX(0)}}
+
+
 @keyframes appearSeparator {to { opacity: 1; width: 60%; } }
 
-@keyframes animate {
+
+@keyframes animateBorder {
   0% {
     width: 0;
+    height: 0;
+    border-top-color: white;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
   }
-    25% {
-      width: 100%;
-      // left: 100%;
-    }
-    50%{
-     
-    }
 
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: white;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: white;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: white;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: white;
+  }
+}
+@keyframes animateBorder2 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: white;
+    border-right-color: transparent;
+  }
+
+  50% {
+    width: 0;
+    height: 100%;
+    border-top-color: transparent;
+    border-bottom-color: white;
+    border-left-color: white;
+    border-right-color: transparent;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-bottom-color: white;
+    border-left-color: white;
+    border-right-color: transparent;
+  }
 }
 
 @keyframes background {

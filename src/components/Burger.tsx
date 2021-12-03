@@ -2,7 +2,6 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router';
 
 const Burger = ({ setOpenMenu, openMenu }: any) => {
-    // const [animateBurger, setAnimateBurger] = useState(false);
     const navigate = useNavigate();
     const location = useLocation().pathname;
 

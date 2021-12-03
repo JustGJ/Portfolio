@@ -1,80 +1,53 @@
 .technologies {
+    &__title {
+        @extend %title;
 
+    }
     &__desc {
         font-size: 1.1rem;
-       
-      }
-    &__title {
-        display: inline-block;
-        position: relative;
-        font-weight: 200;
-        animation:  .5s ease titleToRight;
+        margin-left: 100px;
 
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 0%;
-            height: 2px;
-            right: 0;
-            bottom: -10px;
-            opacity: 0;
-            background-color: var(--color-orange-50);
-            animation:  .4s ease-out .35s forwards appearSeparator;
-          }
+        @media (max-width: 650px) {
+            margin-left: 43px;
+        }
     }
     &__content {
         position: relative;
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        margin: 30px auto ;
-        // margin: 0 auto;
+        width: 80%;
+        margin: 35px auto;
 
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     top: -2px;
-        //     // left: -2px;
-
-        //     width: 2px;
-        //     height: 2px;
-        //     background: #fff;
-        //     // border: 2px solid transparent;
-        //     -webkit-animation: animate 1s linear forwards;
-        //     animation: animate 1s linear forwards;
-            
-        // }
-
-        &:before {
+        &::before, &::after {
             content: "";
             position: absolute;
-            display: block;
-            top: 0;
-            // bottom: 0;
-            // right: 100%;
-
-            width: 2px;
-            height: 2px;
-            background: #fff;
-            // border: 2px solid transparent;
-            -webkit-animation: animate 1s linear forwards;
-            animation: animate 1s linear forwards;
-            
+            top: -2px;
+            left: -2px;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border: 2px solid transparent;
+            animation: animateBorder 1s linear forwards;
         }
 
+        &::after {
+            animation: animateBorder2 1s linear forwards;
+            animation-delay: 1s;
+        }
+       
        
         @media (max-width: 980px) {
             flex-direction: column;
             align-items: center;
         }
         &__technos {
-            width: 48%;
-            margin-top: 40px;
+            width: 100%;
+            padding: 25px;
+            margin: 0 auto;
             text-align: center;
 
             .technos {
-
+                
                 &__list {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);

@@ -11,6 +11,7 @@ interface ITechno {
 const Technologies = () => {
     return (
         <div className="technologies">
+            <h1 className="technologies__title">Technologies</h1>
             <p className="technologies__desc">
                 Voici ce que j'ai pu utiliser dans mes projets jusqu'à présent.
             </p>

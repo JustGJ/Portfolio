@@ -1,9 +1,18 @@
-.portfolio {
+.portfolio { 
+    &__title {
+        @extend %title;
+    }
     &__desc {
         font-size: 1.1rem;
+        margin-left: 100px;
+
+        @media (max-width: 650px) {
+            margin-left: 43px;
+        }
     }
     &__cards {
-        margin-top: 70px;
+        width: 80%;
+        margin:70px auto 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;

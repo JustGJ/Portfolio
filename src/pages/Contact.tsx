@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Loader from 'react-loader-spinner';
+import cv from '../assets/images/jeff-gasparini.pdf';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 declare global {
@@ -80,72 +81,77 @@ const App = () => {
 
     return (
         <div className="contact">
-            <div className="contact__desc">Vous souhaitez me contacter ?</div>
-            {window.innerWidth >= 1325 ? <div className="contact__header"></div> : ''}
-            <div className="contact__container">
-                <form className="contact__form" onSubmit={handleSubmit}>
-                    <h2>Contactez-moi</h2>
-                    <div className="contact__form__social">
-                        <a href="https://github.com/JustGJ">
-                            <i className="fab fa-github" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/jeff-gasparini-%E2%9A%9B%EF%B8%8F-4b9ba0221/">
-                            <i className="fab fa-linkedin" />
-                        </a>
-                    </div>
-                    <div className="contact__form__content">
-                        <input
-                            className={nameError ? 'error' : ''}
-                            type="text"
-                            name="name"
-                            onChange={(e) => setName(e.target.value)}
-                            placeholder="nom *"
-                            value={name}
-                            autoComplete="off"
-                        />
-
-                        <div className="content__email">
-                            {emailError && (
-                                <label className="content__email--error">Email non valide</label>
-                            )}
+            <h1 className="contact__title">Contact</h1>
+            <p className="contact__desc">Vous souhaitez me contacter ?</p>
+            <div className="contact__content">
+                {window.innerWidth >= 550 ? <div className="contact__header"></div> : ''}
+                <div className="contact__container">
+                    <form className="contact__form" onSubmit={handleSubmit}>
+                        <h2>Contactez-moi</h2>
+                        <div className="contact__form__social">
+                            <a href="https://github.com/JustGJ">
+                                <i className="fab fa-github" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/jeff-gasparini-%E2%9A%9B%EF%B8%8F-4b9ba0221/">
+                                <i className="fab fa-linkedin" />
+                            </a>
+                        </div>
+                        <div className="contact__form__content">
                             <input
-                                className={emailError ? 'error' : ''}
-                                type="mail"
-                                name="email"
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="email *"
-                                value={email}
+                                className={nameError ? 'error' : ''}
+                                type="text"
+                                name="name"
+                                onChange={(e) => setName(e.target.value)}
+                                placeholder="nom *"
+                                value={name}
                                 autoComplete="off"
                             />
-                        </div>
-                        <textarea
-                            className={messageError ? 'error' : ''}
-                            name="message"
-                            onChange={(e) => setMessage(e.target.value)}
-                            placeholder="message *"
-                            value={message}
-                        />
-                    </div>
-                    <button className="contact__form__submit" type="submit">
-                        Envoyer
-                    </button>
-                    {loading ? (
-                        <div className="form__loading">
-                            <Loader type="Oval" color="#ffe9c7" height={45} width={45} />
-                        </div>
-                    ) : (
-                        <div ref={ref} className="form__message"></div>
-                    )}
-                </form>
 
-                <div className="contact__social">
-                    <div className="contact__social__details">
-                        <span>jf.gasp@gmail.com</span>
-                        <span>0782435296</span>
-                        <a>
-                            <i className="fas fa-cloud-download-alt" />
-                            <span>CV</span>
-                        </a>
+                            <div className="content__email">
+                                {emailError && (
+                                    <label className="content__email--error">
+                                        Email non valide
+                                    </label>
+                                )}
+                                <input
+                                    className={emailError ? 'error' : ''}
+                                    type="mail"
+                                    name="email"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="email *"
+                                    value={email}
+                                    autoComplete="off"
+                                />
+                            </div>
+                            <textarea
+                                className={messageError ? 'error' : ''}
+                                name="message"
+                                onChange={(e) => setMessage(e.target.value)}
+                                placeholder="message *"
+                                value={message}
+                            />
+                        </div>
+                        <button className="contact__form__submit" type="submit">
+                            Envoyer
+                        </button>
+                        {loading ? (
+                            <div className="form__loading">
+                                <Loader type="Oval" color="#ffe9c7" height={45} width={45} />
+                            </div>
+                        ) : (
+                            <div ref={ref} className="form__message"></div>
+                        )}
+                    </form>
+
+                    <div className="contact__social">
+                        <div className="contact__social__details">
+                            <span>jf.gasp@gmail.com</span>
+                            <span>0782435296</span>
+                            <a href={cv} download="jeff-gasparini.pdf">
+                                <i className="fas fa-cloud-download-alt" />
+                                <span>CV</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

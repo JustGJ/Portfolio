@@ -1,0 +1,22 @@
+%title {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 35px 40px;
+    font-weight: 200;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation:  .5s ease forwards appearToRight;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      right: 0;
+      bottom: -10px;
+      opacity: 0;
+      background-color: #c57b39;
+      animation:  .4s ease-out .35s forwards appearSeparator;
+    }
+}

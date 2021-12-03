@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 // import Linkedin from '../assets/images/linkedin.png';
 import Logo from '../assets/images/logo.png';
 
-const Navbar = ({ openMenu, setOpenMenu }: any) => {
+const Navbar = ({ openMenu, setOpenMenu, openContent, setOpenContent }: any) => {
     const navigate = useNavigate();
 
     const activeClassName = (link: any) =>
@@ -13,17 +13,18 @@ const Navbar = ({ openMenu, setOpenMenu }: any) => {
 
     const handleGoToHome = () => {
         setOpenMenu(false);
+        setOpenContent(false);
         navigate('/');
     };
 
     const handleCloseMenu = () => {
-        if (window.innerWidth < 1325) {
+        if (window.innerWidth <= 1325) {
             setOpenMenu(false);
         }
     };
 
     return (
-        <nav className={`navbar ${openMenu ? 'navbar--active' : ''}`}>
+        <nav className="navbar">
             <div className="navbar__logo" onClick={handleGoToHome}>
                 <img src={Logo} alt="Jeff Gasparini logo" />
             </div>

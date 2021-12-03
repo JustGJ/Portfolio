@@ -28,7 +28,7 @@ const Fade = ({ visible, children, duration, className }: IProps) => {
         if (state === LEAVING) {
             const timer = setTimeout(() => {
                 setState(HIDDEN);
-            }, 1000);
+            }, duration);
             return () => {
                 clearTimeout(timer);
             };
