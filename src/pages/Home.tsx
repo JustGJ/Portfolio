@@ -57,7 +57,7 @@ const Home = ({ setOpenMenu, openMenu, openContent, setOpenContent }: any) => {
             {resize < 1325 ? <Burger setOpenMenu={setOpenMenu} openMenu={openMenu} /> : ''}
 
             <div className="home">
-                {/* <Stars /> */}
+                <Stars />
                 <div className="home__content">
                     <h1 className="home__content__name">JEFF GASPARINI</h1>
                     <hr />
