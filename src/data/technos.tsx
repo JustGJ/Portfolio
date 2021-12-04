@@ -4,27 +4,27 @@ import { SiPostman } from 'react-icons/si';
 const technos = [
     {
         type: 'techno',
-        icon: 'fab fa-html5',
+        awesome: 'fab fa-html5',
         text: 'HTML5, JSX',
     },
     {
         type: 'techno',
-        icon: 'fab fa-sass',
+        awesome: 'fab fa-sass',
         text: 'CSS3, SCSS',
     },
     {
         type: 'techno',
-        icon: 'fab fa-js',
+        awesome: 'fab fa-js',
         text: 'JavaScript',
     },
     {
         type: 'techno',
-        icon: 'fab fa-react',
+        awesome: 'fab fa-react',
         text: 'React, Redux',
     },
     {
         type: 'techno',
-        icon: 'fab fa-node',
+        awesome: 'fab fa-node',
         text: 'Node.js',
     },
 
@@ -35,33 +35,33 @@ const technos = [
     },
     {
         type: 'tool',
-        icon: 'fab fa-git',
+        awesome: 'fab fa-git',
         text: 'Git, Gitflow',
     },
     {
         type: 'tool',
-        icon: 'fab fa-github',
+        awesome: 'fab fa-github',
         text: 'Github',
     },
 
     {
         type: 'tool',
-        icon: 'fab fa-trello',
+        awesome: 'fab fa-trello',
         text: 'Trello',
     },
     {
         type: 'tool',
-        icon: 'fas fa-code',
+        awesome: 'fas fa-code',
         text: 'VSCode',
     },
     {
         type: 'tool',
-        icon: 'fab fa-discord',
+        awesome: 'fab fa-discord',
         text: 'Discord',
     },
     {
         type: 'tool',
-        image: <SiPostman fontSize="3.18rem" />,
+        reactIcon: <SiPostman fontSize="3.18rem" />,
         text: 'Postman',
     },
 ];

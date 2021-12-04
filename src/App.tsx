@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router';
 import { BrowserRouter, Routes } from 'react-router-dom';
-import Content from './components/Content';
 import Fade from './components/Fade';
 import Navbar from './components/Navbar';
 import About from './pages/About';
@@ -21,12 +20,7 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <Home
-                setOpenMenu={setOpenMenu}
-                openMenu={openMenu}
-                openContent={openContent}
-                setOpenContent={setOpenContent}
-            />
+            <Home setOpenMenu={setOpenMenu} openMenu={openMenu} setOpenContent={setOpenContent} />
 
             <Fade visible={openMenu} duration="800" className="fade__navbar">
                 <Navbar

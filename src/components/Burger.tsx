@@ -1,7 +1,12 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router';
 
-const Burger = ({ setOpenMenu, openMenu }: any) => {
+interface IProps {
+    openMenu: Boolean;
+    setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Burger = ({ setOpenMenu, openMenu }: IProps) => {
     const navigate = useNavigate();
     const location = useLocation().pathname;
 

@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface IProps {
     fullName: string;
     react?: string;
@@ -12,7 +10,7 @@ interface IProps {
     github: string;
     website: string;
     image: string;
-    stacks: any;
+    stacks: string[];
 }
 
 const Card = ({ fullName, description, github, website, image, stacks }: IProps) => {
@@ -24,7 +22,7 @@ const Card = ({ fullName, description, github, website, image, stacks }: IProps)
                 </div>
                 <div className="card__face2">
                     <ul className="face2__stack">
-                        {stacks.map((stack: any, index: any) => (
+                        {stacks.map((stack: string, index: number) => (
                             <li key={index}>
                                 <img src={stack} alt={`${stack} icon`} />
                             </li>

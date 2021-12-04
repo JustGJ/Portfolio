@@ -6,7 +6,7 @@ import Particles from 'react-tsparticles';
 const Welcome = () => {
     const ref = useRef<HTMLDivElement>(null);
 
-    const parallax = (e: any) => {
+    const parallax = (e: MouseEvent) => {
         let x = (window.innerWidth - e.pageX * 10) / 100;
         let y = (window.innerHeight - e.pageY * 10) / 100;
 
@@ -23,11 +23,11 @@ const Welcome = () => {
     }, [ref]);
 
     return (
-        <div className="test">
+        <>
             <Particles
                 height="100%"
                 style={{ position: 'absolute' }}
-                canvasClassName="test2"
+                canvasClassName="particles"
                 params={{
                     particles: {
                         number: {
@@ -122,7 +122,6 @@ const Welcome = () => {
                                 size: 0,
                                 duration: 2,
                                 opacity: 0,
-                                //   speed: 3
                             },
                             repulse: {
                                 distance: 400,
@@ -151,7 +150,7 @@ const Welcome = () => {
                     backSpeed={10}></Typed>
                 <Astronaut />
             </div>
-        </div>
+        </>
     );
 };
 

@@ -1,29 +1,7 @@
 import React from 'react';
 
 const Astronaut = () => {
-    // const ref = useRef<HTMLDivElement>(null);
-
-    // const parallax = (e: any) => {
-    //     let x = (window.innerWidth - e.pageX * 10) / 100;
-    //     let y = (window.innerHeight - e.pageY * 10) / 100;
-
-    //     if (ref.current) {
-    //         ref.current.style.transform = `translate(${x}px,${y}px)`;
-    //     }
-
-    //     console.log('pageX : ' + e.pageX);
-    //     console.log('innerWidht : ' + window.innerWidth);
-    // };
-
-    // useEffect(() => {
-    //     document.addEventListener('mousemove', parallax);
-    //     return () => {
-    //         document.removeEventListener('mousemove', parallax);
-    //     };
-    // }, [ref]);
-
     return (
-        // <div ref={ref}>
         <svg
             className="astronaut"
             data-depth="1.5"

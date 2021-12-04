@@ -1,4 +1,5 @@
 import React from 'react';
+import Technos from '../components/Technos';
 import technos from '../data/technos';
 
 interface ITechno {
@@ -20,20 +21,9 @@ const Technologies = () => {
                     <h2>Technologies</h2>
                     <div className="technos__list">
                         {technos.map((techno: ITechno, index) => {
-                            if (techno.type === 'techno') {
-                                console.log(techno.image);
-                                return (
-                                    <div key={index} className="techno__item">
-                                        {techno.icon ? (
-                                            <i className={techno.icon} />
-                                        ) : (
-                                            <img src={techno.image} alt="express icon" />
-                                        )}
-                                        <p>{techno.text}</p>
-                                    </div>
-                                );
-                            }
-                            return null;
+                            return techno.type === 'techno' ? (
+                                <Technos key={index} {...techno} />
+                            ) : null;
                         })}
                     </div>
                 </div>
@@ -42,15 +32,9 @@ const Technologies = () => {
                     <h2>Outils</h2>
                     <div className="technos__list">
                         {technos.map((techno: ITechno, index) => {
-                            if (techno.type === 'tool') {
-                                return (
-                                    <div key={index} className="techno__item">
-                                        {techno.icon ? <i className={techno.icon} /> : techno.image}
-                                        <p>{techno.text}</p>
-                                    </div>
-                                );
-                            }
-                            return null;
+                            return techno.type === 'tool' ? (
+                                <Technos key={index} {...techno} />
+                            ) : null;
                         })}
                     </div>
                 </div>

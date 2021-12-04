@@ -1,26 +1,10 @@
 .welcome {
     pointer-events: none;
-    // height: 80%;
-    // overflow: hidden;
-    // overflow-y: hidden;
-    // height: 100vh;
 }
 
-.test2 {
+.particles {
     position: absolute !important;
-    // bottom: 0%;
-    height: 100% !important;
-    width: 100% !important;
+    height: 100%;
+    width: 100%;
     z-index: 10;
 }
-
-// .test2 {
-//     position: relative !important;
-//     height: 100%;
-//     width: 100%;
-
-// }
-
-// #tsparticles {
-//     height: 100%;
-// }
