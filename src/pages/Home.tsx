@@ -10,9 +10,21 @@ interface IProps {
 }
 
 const Home = ({ setOpenMenu, openMenu, setOpenContent }: IProps) => {
+    const [resize, setResize] = useState(window.innerWidth);
+    const [startMobil, setStartMobil] = useState(false);
+
     const location = useLocation().pathname;
     const navigate = useNavigate();
-    const [resize, setResize] = useState(window.innerWidth);
+
+    // If we start mobile, we navigate to /welcome
+    useEffect(() => {
+        if (window.matchMedia('(max-width: 400px)').matches) {
+            navigate('/welcome');
+            setStartMobil(true);
+        }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [startMobil]);
 
     const handleResize = () => {
         setResize(window.innerWidth);

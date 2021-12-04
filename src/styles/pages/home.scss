@@ -61,6 +61,9 @@
             box-sizing: content-box;
             margin: 2rem auto;
 
+            @media (max-width: 420px) {
+                visibility: hidden;
+            }
             .mouse {
                 &__scroller {
                     width: 3px;
