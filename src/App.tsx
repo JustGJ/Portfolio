@@ -39,17 +39,17 @@ const App = () => {
                 />
             </Fade>
 
-            <Fade visible={openContent} className="fade__content" duration="800">
-                <div className="content">
-                    <Routes>
-                        <Route path="/welcome" element={<Welcome />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/portfolio" element={<Portfolio />} />
-                        <Route path="/technologies" element={<Technologies />} />
-                        <Route path="/contact" element={<Contact />} />
-                    </Routes>
-                </div>
-            </Fade>
+            {/* <Fade visible={openContent} className="fade__content" duration="800"> */}
+            <div className="content">
+                <Routes>
+                    <Route path="/welcome" element={<Welcome />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="/technologies" element={<Technologies />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </div>
+            {/* </Fade> */}
         </BrowserRouter>
     );
 };
