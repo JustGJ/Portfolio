@@ -1,7 +1,5 @@
 .content {
     position: absolute;
-    // width: 80vw;
-    // height: 85vh;
     background-color: var(--color-blue-80);
     color: var(--color-white-00);
     font-weight: 300;
@@ -9,16 +7,12 @@
     border: none;
     height: 100%;
     width: 100%;
-    // right: 0;
-    // bottom: 0;   
+     
     overflow-y:auto;
     overflow-x: hidden;
     box-shadow: -34px 11px 36px 40px var(--color-blue-80);
     z-index: 9997;
 
-    // @media (max-width: 1325px) {
-    //     width: 100vw;
-    //     height: 95vh;
-    // }
+
  
 }
