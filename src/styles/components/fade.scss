@@ -25,12 +25,15 @@
 
 .fade__content {
     position: absolute;
-    height: 87%;
+    height: 85%;
     width: 80%;
     bottom: 0;   
     transition:  0.8s ease-in-out;
     right: 0;
 
+    @media (max-width: 480px) {
+       width: 100%;
+     }
     &--out {
         bottom: -100%;
     }
