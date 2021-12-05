@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,300&family=Raleway:wght@300;400;500&display=swap');
 
+:root {
+  overflow-x: hidden;
+  height: 100%;
+}
+
 
 * {
     margin: 0;
@@ -12,6 +17,14 @@
     text-decoration: none;
     list-style: outside none none;
 }
+
+body, #root {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
 
 a:visited {
     background-color: none;
@@ -36,12 +49,6 @@ a:visited {
     border-radius: 10px;
   }
 
-html, body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    font-family: "Montserrat", sans-serif;
-}
 
 
 
