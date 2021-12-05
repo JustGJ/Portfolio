@@ -16,11 +16,11 @@ const Burger = ({ setOpenMenu, openMenu }: IProps) => {
     };
 
     return (
-        <div className={`burger ${openMenu ? 'burger--active' : ''}`} onClick={handleToggleMenu}>
+        <button className={`burger ${openMenu ? 'burger--active' : ''}`} onClick={handleToggleMenu}>
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     );
 };
 

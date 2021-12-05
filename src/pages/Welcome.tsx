@@ -31,7 +31,7 @@ const Welcome = () => {
                 params={{
                     particles: {
                         number: {
-                            value: 50,
+                            value: 120,
                             density: {
                                 enable: true,
                                 value_area: 800,
@@ -146,7 +146,7 @@ const Welcome = () => {
                         'Vous êtes dans le menu principal.',
                         "Pour en savoir plus sur moi, veuillez naviguer sur l'onglet de votre choix.",
                     ]}
-                    typeSpeed={50}
+                    typeSpeed={30}
                     backSpeed={10}></Typed>
                 <Astronaut />
             </div>

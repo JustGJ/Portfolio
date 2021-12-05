@@ -1,165 +1,163 @@
 .arm-left {
-  animation: armSwipe 5s 1s infinite ease-in-out;
-  transform-origin: left top;
+    animation: armSwipe 5s 1s infinite ease-in-out;
+    transform-origin: left top;
 }
 @keyframes armSwipe {
-  0% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-10deg);
-  }
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
 }
 .arm-right {
-  animation: armRightSwipe 5s 1s infinite ease-in-out;
-  transform-origin: right top;
+    animation: armRightSwipe 5s 1s infinite ease-in-out;
+    transform-origin: right top;
 }
 @keyframes armRightSwipe {
-  0% {
-    transform: rotate(-1deg);
-  }
-  50% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(-1deg);
-  }
+    0% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
 }
 .astronaut {
-  z-index: 4;
-  width: 75%;
-  transform: translateX(25%);
+    z-index: 4;
+    width: 75%;
+    transform: translateX(25%);
 
-  @media (max-width: 600px) {
-    width: 200%;
-    transform: translateX(-5%);
-  }
- 
+    @media (max-width: 600px) {
+        width: 200%;
+        transform: translateX(0%);
+    }
 }
 @keyframes Levitation {
-  0% {
-    transform: translateY(100px);
-  }
-  50% {
-    transform: translateY(80px);
-  }
-  100% {
-    transform: translateY(100px);
-  }
+    0% {
+        transform: translateY(100px);
+    }
+    50% {
+        transform: translateY(80px);
+    }
+    100% {
+        transform: translateY(100px);
+    }
 }
 .leg-right {
-  animation: LegSwipe 5s 1s infinite ease-out;
-  transform-origin: left bottom;
+    animation: LegSwipe 5s 1s infinite ease-out;
+    transform-origin: left bottom;
 }
 @keyframes LegSwipe {
-  0% {
-    transform: rotate(8deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(8deg);
-  }
+    0% {
+        transform: rotate(8deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(8deg);
+    }
 }
 
 @keyframes LegLeftSwipe {
-  0% {
-    transform: rotate(2deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(2deg);
-  }
+    0% {
+        transform: rotate(2deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(2deg);
+    }
 }
 .reflect {
-  animation: faceOpacity 5s 1s infinite;
+    animation: faceOpacity 5s 1s infinite;
 }
 @keyframes faceOpacity {
-  0% {
-    opacity: 0.7;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.7;
-  }
+    0% {
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
 }
 .eye-right {
-  animation: eyeBlink 5s infinite step-start 0s;
+    animation: eyeBlink 5s infinite step-start 0s;
 }
 .eye-left {
-  animation: eyeLeftBlink 5s infinite step-start 0s;
+    animation: eyeLeftBlink 5s infinite step-start 0s;
 }
 @keyframes eyeBlink {
-  90% {
-    transform: none;
-    animation-timing-function: ease-in;
-  }
-  93% {
-    transform: translateY(135px) scaleY(0);
-  }
-  100% {
-    animation-timing-function: ease-in;
-  }
+    90% {
+        transform: none;
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateY(135px) scaleY(0);
+    }
+    100% {
+        animation-timing-function: ease-in;
+    }
 }
 @keyframes eyeLeftBlink {
-  90% {
-    transform: none;
-    animation-timing-function: ease-in;
-  }
-  93% {
-    transform: translateY(155px) scaleY(0);
-  }
-  100% {
-    animation-timing-function: ease-in;
-  }
+    90% {
+        transform: none;
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateY(155px) scaleY(0);
+    }
+    100% {
+        animation-timing-function: ease-in;
+    }
 }
 
 .weclome {
-  position: relative;
+    position: relative;
 }
 
 .typed {
-  background-color: #343436;
-  border-left: 4px solid #a8a8a8;
-  padding: 10px;
-  color: rgb(218, 218, 218);
-  position: absolute;
-  top: 22%;
-  left: 22%;
-  z-index: 4;
+    background-color: #26272b;
+    color: #d4d6d8;
+    font-size: 1rem;
+    line-height: 1.75;
+    padding: 15px 25px;
+    margin-bottom: 75px;
+    position: absolute;
+    width: max-content;
+    cursor: default;
+    border-left: 5px solid;
+    z-index: 1;
+    top: 22%;
+    left: 22% ;
 
-  @media (max-width: 800px) {
-    top: 10%;
+    @media (max-width: 800px) {
+      font-size: .9rem;
+        top: 6%;
+        left: 15%;
+        width: 80%;
+    }
+
+    &::after {
+        content: '';
+        margin-top: -30px;
+        padding-top: 0px;
+        position: relative;
+        bottom: -45px;
+        left: 20px;
+        border-width: 30px 0 0 30px;
+        border-style: solid;
+        border-color: #343436 transparent;
+        display: block;
+        width: 0;
+    }
 }
-@media (max-width: 680px) {
-  font-size: .8rem;
-}
-@media (max-width: 400px) {
-  font-size: .7rem;
-}
-
-  &::after {
-    content: "";
-    margin-top: -30px;
-    padding-top: 0;
-    position: relative;
-    bottom: -30.6px;
-    left: 10px;
-    border-color: #343436 transparent;
-    border-style: solid;
-    border-width: 30px 0 0 30px;
-    display: block;
-    width: 0;
-  }
-}
-
-
-
