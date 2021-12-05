@@ -1,7 +1,7 @@
 .fade__navbar {
     position: absolute;
-    width: 20%;
-    height: 100%;
+    width: 20vw;
+    height: 100vh;
     left: 0%;
     transition: all 0.8s ease-in-out;
     z-index: 9998;
@@ -25,14 +25,14 @@
 
 .fade__content {
     position: absolute;
-    height: 85%;
-    width: 80%;
+    height: 85vh;
+    width: 80vw;
     bottom: 0;   
     transition:  0.8s ease-in-out;
     right: 0;
 
     @media (max-width: 480px) {
-       width: 100%;
+        width: 100vw;
      }
     &--out {
         bottom: -100%;
