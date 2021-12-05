@@ -31,11 +31,12 @@
 .astronaut {
     z-index: 4;
     width: 75%;
-    transform: translateX(25%);
+    transform: translate(25%, 2%);
 
     @media (max-width: 600px) {
         width: 200%;
         transform: translateX(0%);
+
     }
 }
 @keyframes Levitation {
@@ -141,8 +142,8 @@
     left: 22% ;
 
     @media (max-width: 800px) {
-      font-size: .9rem;
-        top: 6%;
+      font-size: .8rem;
+        top: 10%;
         left: 15%;
         width: 80%;
     }

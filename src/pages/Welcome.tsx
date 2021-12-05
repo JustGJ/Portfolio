@@ -146,7 +146,7 @@ const Welcome = () => {
                         'Vous êtes dans le menu principal.',
                         "Pour en savoir plus sur moi, veuillez naviguer sur l'onglet de votre choix.",
                     ]}
-                    typeSpeed={30}
+                    typeSpeed={28}
                     backSpeed={10}></Typed>
                 <Astronaut />
             </div>

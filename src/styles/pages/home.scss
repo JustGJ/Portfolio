@@ -3,6 +3,7 @@
     width: 100%;
     height: 100%;
     background:  center / cover no-repeat url('../../assets/images/home.jpg');
+    z-index: 999;
 
     &__content {
         position: absolute;

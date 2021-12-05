@@ -67,7 +67,6 @@ const Home = ({ setOpenMenu, openMenu, setOpenContent }: IProps) => {
     return (
         <>
             {resize < 1325 ? <Burger setOpenMenu={setOpenMenu} openMenu={openMenu} /> : ''}
-
             <div className="home">
                 <Stars />
                 <div className="home__content">
