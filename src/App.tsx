@@ -20,15 +20,13 @@ const App = () => {
     //* Go yo welcome si on est sur mobile
 
     useEffect(() => {
+        console.log(window.scrollY);
+
         if (window.matchMedia('(min-width: 400px)').matches) {
             setStartMobil(false);
         } else {
             setStartMobil(true);
         }
-    }, []);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
     }, []);
 
     return (
