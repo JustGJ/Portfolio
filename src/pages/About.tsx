@@ -26,7 +26,7 @@ const About = () => {
                             dès mars 2022, afin de consolider et mettre en pratique mes compétences.
                             Le travail en équipe, l'entraide, la communication, et l'autonomie sont
                             pour moi des compétences et des valeurs importantes. Je recherche
-                            activement une alternance sur Bordeaux en contrat d'apprentissage, avec
+                            activement une alternance sur Bordeaux, en contrat d'apprentissage, avec
                             pour rythme : 3 semaines d'entreprise / 1 semaine d'école dans le but de
                             valider mon année à la Wild Code School. Cette année de formation me
                             mènera au passage du titre “Concepteur Développeur d’Applications”,
