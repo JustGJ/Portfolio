@@ -3,6 +3,7 @@ import { Route } from 'react-router';
 import { BrowserRouter, Routes } from 'react-router-dom';
 import Fade from './components/Fade';
 import Navbar from './components/Navbar';
+import Wrapper from './components/Wrapper';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
@@ -26,30 +27,39 @@ const App = () => {
         }
     }, []);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <BrowserRouter>
-            <Home setOpenMenu={setOpenMenu} openMenu={openMenu} setOpenContent={setOpenContent} />
-
-            <Fade visible={openMenu} duration="800" className="fade__navbar">
-                <Navbar
-                    openMenu={openMenu}
+            <Wrapper>
+                <Home
                     setOpenMenu={setOpenMenu}
-                    openContent={openContent}
+                    openMenu={openMenu}
                     setOpenContent={setOpenContent}
                 />
-            </Fade>
 
-            <Fade visible={openContent} className="fade__content" duration="800">
-                <div className="content">
-                    <Routes>
-                        <Route path="/welcome" element={<Welcome />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/portfolio" element={<Portfolio />} />
-                        <Route path="/technologies" element={<Technologies />} />
-                        <Route path="/contact" element={<Contact />} />
-                    </Routes>
-                </div>
-            </Fade>
+                <Fade visible={openMenu} duration="800" className="fade__navbar">
+                    <Navbar
+                        openMenu={openMenu}
+                        setOpenMenu={setOpenMenu}
+                        openContent={openContent}
+                        setOpenContent={setOpenContent}
+                    />
+                </Fade>
+                <Fade visible={openContent} className="fade__content" duration="800">
+                    <div className="content">
+                        <Routes>
+                            <Route path="/welcome" element={<Welcome />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/portfolio" element={<Portfolio />} />
+                            <Route path="/technologies" element={<Technologies />} />
+                            <Route path="/contact" element={<Contact />} />
+                        </Routes>
+                    </div>
+                </Fade>
+            </Wrapper>
         </BrowserRouter>
     );
 };
