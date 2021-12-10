@@ -6,15 +6,15 @@ const ENTERING = 3;
 const LEAVING = 4;
 
 interface IProps {
-    visible: any;
-    children: any;
-    duration?: any;
-    className?: any;
+    visible: Boolean;
+    children: React.ReactNode;
+    duration?: number;
+    className?: string;
 }
 
 const Fade = ({ visible, children, duration, className }: IProps) => {
     const [state, setState] = useState(visible ? VISIBLE : HIDDEN);
-    let style = state === VISIBLE ? `${className}` : `${className} ${className}--out`;
+    const style = state === VISIBLE ? `${className}` : `${className} ${className}--out`;
 
     useEffect(() => {
         if (!visible) {
@@ -37,6 +37,7 @@ const Fade = ({ visible, children, duration, className }: IProps) => {
             document.body.offsetHeight;
             setState(VISIBLE);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state]);
 
     if (state === HIDDEN) return null;

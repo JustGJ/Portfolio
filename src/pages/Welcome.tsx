@@ -144,7 +144,7 @@ const Welcome = () => {
                     strings={[
                         'Bonjour cher visiteur, bienvenue sur mon site !',
                         'Vous êtes dans le menu principal.',
-                        "Pour en savoir plus sur moi, veuillez naviguer sur l'onglet de votre choix.",
+                        'Pour en savoir plus sur moi, veuillez naviguer sur le menu de votre choix.',
                     ]}
                     typeSpeed={28}
                     backSpeed={10}></Typed>

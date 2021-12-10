@@ -27,7 +27,7 @@
     transition:  0.7s ease-in-out;
     right: 0%;
     width: 80vw;
-    height: 85vh;
+    height: 90vh;
     z-index: 9997;
 
     @media (max-width: 1325px) {
@@ -35,7 +35,7 @@
     }
 
     @media (max-width: 500px) {
-        height: 82vh;
+        height: 85vh;
     }
 
     &--out {

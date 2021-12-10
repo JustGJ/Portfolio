@@ -26,12 +26,13 @@ const About = () => {
                             dès mars 2022, afin de consolider et mettre en pratique mes compétences.
                             Le travail en équipe, l'entraide, la communication, et l'autonomie sont
                             pour moi des compétences et des valeurs importantes. Je recherche
-                            activement une alternance sur Bordeaux, en contrat d'apprentissage, avec
-                            pour rythme : 3 semaines d'entreprise / 1 semaine d'école dans le but de
-                            valider mon année à la Wild Code School. Cette année de formation me
-                            mènera au passage du titre “Concepteur Développeur d’Applications”,
-                            inscrit au RNCP (équivalent bac + 3/4), et de démarrer ma nouvelle
-                            carrière professionnelle dans ce monde qui me passionne tant.
+                            activement une alternance sur Bordeaux ou Montpellier en contrat
+                            d'apprentissage, avec pour rythme : 3 semaines d'entreprise / 1 semaine
+                            d'école dans le but de valider mon année à la Wild Code School. Cette
+                            année de formation me mènera au passage du titre “Concepteur Développeur
+                            d’Applications”, inscrit au RNCP (équivalent bac + 3/4), et de démarrer
+                            ma nouvelle carrière professionnelle dans ce monde qui me passionne
+                            tant.
                         </p>
 
                         <h3>Objectifs</h3>
@@ -47,9 +48,10 @@ const About = () => {
                         <p>
                             Etant familier avec JavaScript, je trouve la réalisation d'un Back-end
                             avec ce même langage très intéressante. C'est pour cela que j'ai décidé
-                            de m'y interresser, et de réaliser un mini réseau social en MERN project
-                            (Mongo, Express, React, Nodejs) avec une structure MVC, afin de tester
-                            et mettre en pratique ces nouvelles technologies.
+                            de m'y interresser, et de de me lancer dans la réalisation un mini
+                            réseau social en MERN project (Mongo, Express, React, Nodejs) avec une
+                            structure MVC, afin de tester et mettre en pratique ces nouvelles
+                            technologies.
                         </p>
                     </div>
                 </div>

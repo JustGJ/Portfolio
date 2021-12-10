@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Route } from 'react-router';
 import { BrowserRouter, Routes } from 'react-router-dom';
 import Fade from './components/Fade';
@@ -14,20 +14,6 @@ import Welcome from './pages/Welcome';
 const App = () => {
     const [openMenu, setOpenMenu] = useState(false);
     const [openContent, setOpenContent] = useState(false);
-    const [startMobil, setStartMobil] = useState(false);
-    //* type array Card.tsx
-    //* animation navbar link brutal
-    //* Go yo welcome si on est sur mobile
-
-    useEffect(() => {
-        console.log(window.scrollY);
-
-        if (window.matchMedia('(min-width: 400px)').matches) {
-            setStartMobil(false);
-        } else {
-            setStartMobil(true);
-        }
-    }, []);
 
     return (
         <BrowserRouter>
@@ -38,7 +24,7 @@ const App = () => {
                     setOpenContent={setOpenContent}
                 />
 
-                <Fade visible={openMenu} duration="800" className="fade__navbar">
+                <Fade visible={openMenu} duration={800} className="fade__navbar">
                     <Navbar
                         openMenu={openMenu}
                         setOpenMenu={setOpenMenu}
@@ -46,7 +32,7 @@ const App = () => {
                         setOpenContent={setOpenContent}
                     />
                 </Fade>
-                <Fade visible={openContent} className="fade__content" duration="800">
+                <Fade visible={openContent} className="fade__content" duration={800}>
                     <div className="content">
                         <Routes>
                             <Route path="/welcome" element={<Welcome />} />
