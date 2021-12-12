@@ -16,7 +16,7 @@ const projects = [
     {
         fullName: 'Social Network MERN-Project',
         stacks: [react, scss, nodejs, mongodb],
-        description: 'Un réseau social avec un back-end JS (en ligne très prochainement)',
+        description: 'Un mini réseau social avec un back-end JavaScript',
         github: 'https://github.com/JustGJ/MERN-PROJECT-Social-Network',
         website: 'https://mern-project-social-network.herokuapp.com/',
         image: raccoont,
