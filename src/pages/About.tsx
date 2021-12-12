@@ -47,9 +47,8 @@ const About = () => {
                         <h3>Fullstack</h3>
                         <p>
                             Etant familier avec JavaScript, je trouve la réalisation d'un Back-end
-                            avec ce même langage très intéressante. C'est pour cela que j'ai décidé
-                            de m'y interresser, et de me lancer dans la réalisation d'un mini réseau
-                            social en MERN project (Mongo, Express, React, Nodejs) avec une
+                            avec ce même langage très intéressante. J'ai ainsi réalisé un mini
+                            réseau social en MERN project (Mongo, Express, React, Nodejs) avec une
                             structure MVC, afin de tester et mettre en pratique ces nouvelles
                             technologies.
                         </p>
