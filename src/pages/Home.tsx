@@ -73,7 +73,7 @@ const Home = ({ setOpenMenu, openMenu, setOpenContent }: IProps) => {
                     <h1 className="home__content__name">JEFF GASPARINI</h1>
                     <hr />
                     <h2 className="home__content__dev">Développeur Web</h2>
-                    <h2 className="home__content__country">France</h2>
+                    <h2 className="home__content__country">Bordeaux</h2>
                     <div className="home__content__mouse">
                         <div className="mouse__scroller"></div>
                     </div>
