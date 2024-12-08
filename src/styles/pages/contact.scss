@@ -78,11 +78,10 @@
 
         &__social {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 90px;
 
             a {
                 display: inline-block;
-                width: 15%;
                 cursor: pointer;
 
                 @media (max-width: 380px) {

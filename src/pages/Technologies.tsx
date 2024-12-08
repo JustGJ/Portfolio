@@ -1,4 +1,3 @@
-import React from 'react';
 import Technos from '../components/Technos';
 import technos from '../data/technos';
 
@@ -12,10 +11,9 @@ interface ITechno {
 const Technologies = () => {
     return (
         <div className="technologies">
-            <h1 className="technologies__title">Technologies</h1>
+            <h1 className="technologies__title">Technologies & Outils</h1>
             <p className="technologies__desc">
-                Voici ce que j'ai pu utiliser dans mes projets jusqu'à présent.
-            </p>
+            Voici les technologies que j'ai utilisées dans le cadre de projets professionnels en entreprise et personnels.</p>
             <div className="technologies__content">
                 <div className="technologies__content__technos">
                     <h2>Technologies</h2>

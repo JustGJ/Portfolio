@@ -8,7 +8,7 @@ interface IProps {
     mongodb?: string;
     description: string;
     github: string;
-    website: string;
+    website?: string;
     image: string;
     stacks: string[];
 }
@@ -24,15 +24,17 @@ const Card = ({ fullName, description, github, website, image, stacks }: IProps)
                     <ul className="face2__stack">
                         {stacks.map((stack: string, index: number) => (
                             <li key={index}>
-                                <img src={stack} alt={`${stack} icon`} />
+                                <img style={{paddingTop: '5px'}} src={stack} alt={`${stack} icon`} />
                             </li>
                         ))}
                     </ul>
                     <p className="face2__description">{description}</p>
                     <div className="face2__links">
-                        <a href={website} rel="noopener noreferrer" target="_blank">
-                            <i className="fas fa-external-link-square-alt" />
-                        </a>
+                       {
+                           website &&  <a href={website} rel="noopener noreferrer" target="_blank">
+                           <i className="fas fa-external-link-square-alt" />
+                       </a>
+                       }
                         <a href={github} rel="noopener noreferrer" target="_blank">
                             <i className="fab fa-github" />
                         </a>
